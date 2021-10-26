@@ -30,4 +30,10 @@ body {
     height: 55px;
     font-size: 25px;
     border: 2px solid;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
 }
