@@ -1,0 +1,33 @@
+body {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.game-title {
+    font-size: 40px;
+    color: slateblue;
+    text-align: center;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 400px;
+    margin: 100px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 80px;
+    cursor: pointer;
+    line-height: 100px;
+    border: 2px solid;
+}
+
+.start-button {
+    background-color: thistle;
+    width: 200px;
+    height: 55px;
+    font-size: 25px;
+    border: 2px solid;
+}
