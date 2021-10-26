@@ -32,7 +32,8 @@ function handleResultValidation() {
 
 }
 
-function handleCellClick(){
+function handleCellClick(clickedCellEvent){
+    const clickedCell = clickedCellEvent.target;
 
 }
 
@@ -41,8 +42,7 @@ function handleStartGame() {
 }
 
 // And finally we add our event listeners to the actual game cells, as well as our start button
-const cells = document.querySelectorAll(".cell");
-
-cells.addEventListener('click', e => {
-    console.log(e)
-})
+document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
+document.querySelector('.start-button').addEventListener('click', handleStartGame);
+   
+   
