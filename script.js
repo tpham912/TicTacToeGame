@@ -1,11 +1,11 @@
 const statusDisplay = document.querySelector('.game-status');
 
 let gameActive = true;
-let currentPlayer = "X";
+let currentPlayer = "O";
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-const winningMessage = () => `Player ${currentPlayer} has won!`;
-const drawMessage = () => `IT'S A DRAW!!`;
+const winningMessage = () => `Player ${currentPlayer} wins!!!`;
+const drawMessage = () => `IT'S A DRAW, LOSERS!!`;
 const currentPlayerTurn = () => `${currentPlayer}'s turn`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
