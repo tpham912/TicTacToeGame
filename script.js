@@ -4,8 +4,8 @@ let gameActive = true;
 let currentPlayer = "O";
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
-const winningMessage = () => `Player ${currentPlayer} wins!!!`;
-const drawMessage = () => `IT'S A DRAW, LOSERS!!`;
+const winningMessage = () => `PLAYER ${currentPlayer} WINS!!!`;
+const drawMessage = () => `IT'S A TIE`;
 const currentPlayerTurn = () => `${currentPlayer}'s turn`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
@@ -38,12 +38,16 @@ function handleResultValidation() {
         let a = gameState[winCondition[0]];
         let b = gameState[winCondition[1]];
         let c = gameState[winCondition[2]];
+        console.log(`checking win conditions for spaces ${winCondition[0]}, ${winCondition[1]}, ${winCondition[2]}`);
         if (a === '' || b === '' || c === '') {
+            console.log('no winner found for this line');
             continue;
         }
         if (a === b && b === c) {
             roundWon = true;
-            break
+            console.log('winner found');
+            break;
+
         }
     }
 
@@ -75,7 +79,7 @@ function handleCellClick(clickedCellEvent) {
     handleResultValidation();
 }
 
-function handleRestartGame() {
+function handleStartGame() {
     gameActive = true;
     currentPlayer = "X";
     gameState = ["", "", "", "", "", "", "", "", ""];
@@ -83,5 +87,18 @@ function handleRestartGame() {
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
 }
 
+function handleEndGame() {
+   gameActive = false;
+   currentPlayer = "";
+   gameState = ["", "", "", "", "", "", "", "", ""];
+   statusDisplay.innerHTML = 'End Game';
+   document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
+
+
+
+}
+    
+
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
-document.querySelector('.start-button').addEventListener('click', handleRestartGame);
+document.querySelector('.start-button').addEventListener('click', handleStartGame);
+document.querySelector('.end-button').addEventListener('click', handleEndGame);
