@@ -4,6 +4,7 @@
   <ol>
     <li><a href="#description">Description</a></li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#demo">Demo</a></li>
     <li><a href="#links">Links</a></li>
     <li><a href="#contributors">Contributor</a></li>
     <li><a href="#license">License</a></li>
@@ -26,7 +27,7 @@ Walkthrough video: [Tic Tac Toe Game](tictactoe.gif)
 
 # Links
 
-GitHub URL: 
+GitHub URL: https://tpham912.github.io/TicTacToeGame/
 
 # Contributor 
 
