@@ -6,7 +6,7 @@ let gameState = ["", "", "", "", "", "", "", "", ""];
 
 const winningMessage = () => `PLAYER ${currentPlayer} WINS!!!`;
 const drawMessage = () => `IT'S A TIE`;
-const currentPlayerTurn = () => `${currentPlayer}'s turn`;
+const currentPlayerTurn = () => `PLAYER ${currentPlayer}'S TURN`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
 
@@ -94,11 +94,8 @@ function handleEndGame() {
    statusDisplay.innerHTML = 'End Game';
    document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");
 
-
-
 }
     
-
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', handleCellClick));
 document.querySelector('.start-button').addEventListener('click', handleStartGame);
 document.querySelector('.end-button').addEventListener('click', handleEndGame);
