@@ -11,9 +11,9 @@
   </ol>
 
 # Description
-Tic tac toe is a two player game. The object of tic tac toe is to get three in a row. It's played on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled. If neither user gets three in a row, the message will display a message. 
+Tic tac toe is a two player game. The object of tic tac toe is to get three in a row. It's played on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row. If neither user gets three in a row, the message will display the game is a tie. 
 
-User has the option to restart mid game or end game completely. 
+User also has the option to restart mid game or end game completely. 
 
 # Usage
 
